@@ -119,7 +119,7 @@ const Home = () => {
                     
 
           
-                    return <div className="w-[50%] relative overflow-hidden mb-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                    return <div className="w-[50%] shrink-0 relative overflow-hidden mb-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
 
                       <div className="iconBox z-10 absolute right-6 top-3 flex flex-col justify-center text-center">
                      <span className='flex justify-center'> <FaHeart onClick={()=>handleLikes(ele._id)} color={ele.likes.includes(userStore.user._id)?'red':''} size={30} /> <sub>{ele.likes.length}</sub></span>
