@@ -110,7 +110,7 @@ const Home = () => {
         <Sidebar    getAllUserPost={  getAllUserPost}/>
         </div>
      
-          <section className="w-[90%]">
+          <section className="w-[90%] shrink-0">
             <div className="container  px-6 py-10 mx-auto">
 
               <div className="w-full flex flex-col items-center ">
@@ -119,13 +119,13 @@ const Home = () => {
                     
 
           
-                    return <div className="w-[50%] shrink-0 relative overflow-hidden mb-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                    return <div className="w-[50%] min-w-[250px] shrink-0 relative overflow-hidden mb-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
 
-                      <div className="iconBox z-10 absolute right-6 top-3 flex flex-col justify-center text-center">
-                     <span className='flex justify-center'> <FaHeart onClick={()=>handleLikes(ele._id)} color={ele.likes.includes(userStore.user._id)?'red':''} size={30} /> <sub>{ele.likes.length}</sub></span>
-                     <p>likes</p>
-                     <GoCommentDiscussion onClick={()=>commentClicked(ele)} size={30} className='mt-5 mx-auto'/>
-                     <p>comments</p>
+                      <div className="iconBox z-10 absolute sm:right-6 right-1 sm:top-3 top-64 flex flex-col justify-center text-center">
+                     <span className='flex justify-center'> <FaHeart onClick={()=>handleLikes(ele._id)} color={ele.likes.includes(userStore.user._id)?'red':''} className='sm:size-10 size-6' /> <sub>{ele.likes.length}</sub></span>
+                     <p className='sm:text-lg text-xs'>likes</p>
+                     <GoCommentDiscussion onClick={()=>commentClicked(ele)}  className='mt-5 mx-auto sm:size-10 size-6'/>
+                     <p className='sm:text-lg text-xs'>comments</p>
                       </div>
                       <div className="mt-4">
       <div className="flex items-center">
